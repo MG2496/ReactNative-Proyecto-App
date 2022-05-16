@@ -1,23 +1,22 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
 import HomeScreen from '../screens/HomeScreen';
-import WelcomeScreen from '../screens/WelcomeScreen';
-import TypeScreen from '../screens/TypeScreen';
-import SelectionScreen from '../screens/SelectionScreen';
+import PastaScreen from '../screens/PastaScreen';
+import SaladScreen from '../screens/SaladScreen';
+import SushiScreen from '../screens/SushiScreen';
 
 const Stack = createStackNavigator();
+
 
 export default function UserStack() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="welcome" component={WelcomeScreen} />
-        <Stack.Screen name="Type" component={TypeScreen} />
-        <Stack.Screen name="Selection" component={SelectionScreen} />
-        {/* Las pantallas a las que el usuario pueda entrar */}
+        <Stack.Screen name="Pasta" component={PastaScreen} />
+        <Stack.Screen name="Salad" component={SaladScreen} />
+        <Stack.Screen name="Sushi" component={SushiScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
